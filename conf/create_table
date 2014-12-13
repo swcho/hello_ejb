@@ -1,0 +1,5 @@
+CREATE DATABASE test default character set 'utf8' default collate 'utf8_general_ci';
+GRANT ALL PRIVILEGES ON test.* TO 'test'@'localhost' IDENTIFIED BY 'test';
+GRANT FILE, PROCESS ON *.* TO 'test'@'localhost';
+COMMIT;
+FLUSH PRIVILEGES;

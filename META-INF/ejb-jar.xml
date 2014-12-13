@@ -25,6 +25,61 @@
                 <env-entry-type>java.lang.Double</env-entry-type>
                 <env-entry-value>0.067</env-entry-value>
             </env-entry>
-    </session>
+            <resource-ref>
+                <res-ref-name>jdbc/empDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+                <res-sharing-scope>Shareable</res-sharing-scope>
+            </resource-ref>
+
+
+        </session>
+        <session>
+            <ejb-name>EmpSessionEJB</ejb-name>
+            <home>swforge.EmpSessionHome</home>
+            <remote>swforge.EmpSession</remote>
+            <ejb-class>swforge.EmpSessionBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref>
+                <res-ref-name>jdbc/testDb</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+                <res-sharing-scope>Shareable</res-sharing-scope>
+            </resource-ref>
+        </session>
+
+        <!--<session>-->
+            <!--<display-name>EmpEJB</display-name>-->
+            <!--<ejb-name>EmpEJB</ejb-name>-->
+            <!--<home>com.sds.ejb.ch5.EmpHome</home>-->
+            <!--<remote>com.sds.ejb.ch5.Emp</remote>-->
+            <!--<ejb-class>com.sds.ejb.ch5.EmpEJB</ejb-class>-->
+            <!--<session-type>Stateless</session-type>-->
+            <!--<transaction-type>Container</transaction-type>-->
+            <!--<security-identity>-->
+                <!--<description></description>-->
+                <!--<use-caller-identity></use-caller-identity>-->
+            <!--</security-identity>-->
+            <!--<resource-ref>-->
+                <!--<res-ref-name>jdbc/empDB</res-ref-name>-->
+                <!--<res-type>javax.sql.DataSource</res-type>-->
+                <!--<res-auth>Container</res-auth>-->
+                <!--<res-sharing-scope>Shareable</res-sharing-scope>-->
+            <!--</resource-ref>-->
+        <!--</session>-->
+
     </enterprise-beans>
+    <!--<assembly-descriptor>-->
+        <!--<container-transaction>-->
+            <!--<method>-->
+                <!--<ejb-name>EmpEJB</ejb-name>-->
+                <!--<method-intf>Remote</method-intf>-->
+                <!--<method-name>getEmpContents</method-name>-->
+                <!--<method-params />-->
+            <!--</method>-->
+            <!--<trans-attribute>Required</trans-attribute>-->
+        <!--</container-transaction>-->
+    <!--</assembly-descriptor>-->
 </ejb-jar>
+

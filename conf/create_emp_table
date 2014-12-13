@@ -1,0 +1,6 @@
+use test;
+DROP TABLE EMP;
+CREATE TABLE EMP (id INT, name VARCHAR(20), email VARCHAR(20));
+INSERT INTO EMP (id,name,email) VALUES(1,"Vivek","xuz@abc.com");
+INSERT INTO EMP (id,name,email) VALUES(2,"Priya","p@gmail.com");
+INSERT INTO EMP (id,name,email) VALUES(3,"Tom","tom@yahoo.com");
