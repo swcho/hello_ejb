@@ -13,5 +13,18 @@
             <session-type>Stateless</session-type>
             <transaction-type>Container</transaction-type>
         </session>
+        <session>
+            <ejb-name>LoanSessionEJB</ejb-name>
+            <home>swforge.LoanSessionHome</home>
+            <remote>swforge.LoanSession</remote>
+            <ejb-class>swforge.LoanSessionBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+            <env-entry>
+                <env-entry-name>loan/interest</env-entry-name>
+                <env-entry-type>java.lang.Double</env-entry-type>
+                <env-entry-value>0.067</env-entry-value>
+            </env-entry>
+    </session>
     </enterprise-beans>
 </ejb-jar>
