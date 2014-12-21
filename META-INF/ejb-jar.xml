@@ -63,6 +63,38 @@
                 <res-sharing-scope>Shareable</res-sharing-scope>
             </resource-ref>
         </entity>
+        <entity>
+            <ejb-name>BookEntityEJB</ejb-name>
+            <home>swforge.BookEntityHome</home>
+            <remote>swforge.BookEntity</remote>
+            <ejb-class>swforge.BookEntityBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>java.lang.String</prim-key-class>
+            <reentrant>false</reentrant>
+            <cmp-version>1.x</cmp-version>
+            <abstract-schema-name>BookEntityEJB</abstract-schema-name>
+            <cmp-field>
+                <description>no description</description>
+                <field-name>price</field-name>
+            </cmp-field>
+            <cmp-field>
+                <description>no description</description>
+                <field-name>code</field-name>
+            </cmp-field>
+            <cmp-field>
+                <description>no description</description>
+                <field-name>writer</field-name>
+            </cmp-field>
+            <cmp-field>
+                <description>no description</description>
+                <field-name>title</field-name>
+            </cmp-field>
+            <primkey-field>code</primkey-field>
+            <security-identity>
+                <description></description>
+                <use-caller-identity></use-caller-identity>
+            </security-identity>
+        </entity>
 
         <!--<session>-->
             <!--<display-name>EmpEJB</display-name>-->
@@ -96,5 +128,233 @@
             <!--<trans-attribute>Required</trans-attribute>-->
         <!--</container-transaction>-->
     <!--</assembly-descriptor>-->
+    <assembly-descriptor>
+        <method-permission>
+            <unchecked />
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getPrimaryKey</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>getEJBMetaData</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>findByWriter</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>findInRange</method-name>
+                <method-params>
+                    <method-param>double</method-param>
+                    <method-param>double</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>remove</method-name>
+                <method-params>
+                    <method-param>java.lang.Object</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getEJBHome</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>getHomeHandle</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getTitle</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>remove</method-name>
+                <method-params>
+                    <method-param>javax.ejb.Handle</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getCode</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>findByPrimaryKey</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>setTitle</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getWriter</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>create</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                    <method-param>java.lang.String</method-param>
+                    <method-param>java.lang.String</method-param>
+                    <method-param>double</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getHandle</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>setPrice</method-name>
+                <method-params>
+                    <method-param>double</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>remove</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>isIdentical</method-name>
+                <method-params>
+                    <method-param>javax.ejb.EJBObject</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getPrice</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>setWriter</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+        </method-permission>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getWriter</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>setTitle</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>setPrice</method-name>
+                <method-params>
+                    <method-param>double</method-param>
+                </method-params>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getCode</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>remove</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getPrice</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>setWriter</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getTitle</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+    </assembly-descriptor>
+
 </ejb-jar>
 
