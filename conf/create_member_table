@@ -1,0 +1,7 @@
+USE test;
+DROP TABLE test.member;
+CREATE TABLE test.member (
+	socialid 	varchar(13) primary key,
+	name	varchar(20),
+	address 	varchar(100)
+);
