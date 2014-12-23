@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE ejb-jar PUBLIC '-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN' 'http://java.sun.com/dtd/ejb-jar_2_0.dtd'>
+
+<ejb-jar>
+    <display-name>AccountBean</display-name>
+    <enterprise-beans>
+        <session>
+            <display-name>AccountEJB</display-name>
+            <ejb-name>AccountEJB</ejb-name>
+            <home>com.sds.ejb.ch9.AccountHome</home>
+            <remote>com.sds.ejb.ch9.Account</remote>
+            <ejb-class>com.sds.ejb.ch9.AccountEJB</ejb-class>
+            <session-type>Stateful</session-type>
+            <transaction-type>Bean</transaction-type>
+            <security-identity>
+                <description></description>
+                <use-caller-identity></use-caller-identity>
+            </security-identity>
+            <resource-ref>
+                <res-ref-name>jdbc/AccountDB</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+                <res-sharing-scope>Shareable</res-sharing-scope>
+            </resource-ref>
+        </session>
+    </enterprise-beans>
+</ejb-jar>
