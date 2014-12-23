@@ -54,6 +54,20 @@
             <session-type>Stateless</session-type>
             <transaction-type>Container</transaction-type>
         </session>
+        <session>
+            <ejb-name>InventorySessionEJB</ejb-name>
+            <home>swforge.InventorySessionHome</home>
+            <remote>swforge.InventorySession</remote>
+            <ejb-class>swforge.InventorySessionBean</ejb-class>
+            <session-type>Stateful</session-type>
+            <transaction-type>Container</transaction-type>
+            <resource-ref>
+                <res-ref-name>jdbc/testDb</res-ref-name>
+                <res-type>javax.sql.DataSource</res-type>
+                <res-auth>Container</res-auth>
+                <res-sharing-scope>Shareable</res-sharing-scope>
+            </resource-ref>
+        </session>
         <entity>
             <ejb-name>MemberEntityEJB</ejb-name>
             <home>swforge.MemberEntityHome</home>
@@ -687,6 +701,36 @@
                 <ejb-name>EmployeeEntityEJB</ejb-name>
                 <method-intf>Local</method-intf>
                 <method-name>getCompany</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+
+        <container-transaction>
+            <method>
+                <ejb-name>InventorySessionEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getItem</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>InventorySessionEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>delivery</method-name>
+                <method-params>
+                    <method-param>int</method-param>
+                </method-params>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>InventorySessionEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getQuantity</method-name>
                 <method-params />
             </method>
             <trans-attribute>Required</trans-attribute>
