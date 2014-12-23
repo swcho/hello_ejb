@@ -69,435 +69,320 @@
                 <res-sharing-scope>Shareable</res-sharing-scope>
             </resource-ref>
         </entity>
-        <!--<entity>-->
-            <!--<ejb-name>BookEntityEJB</ejb-name>-->
-            <!--<home>swforge.BookEntityHome</home>-->
-            <!--<remote>swforge.BookEntity</remote>-->
-            <!--<ejb-class>swforge.BookEntityBean</ejb-class>-->
-            <!--<persistence-type>Container</persistence-type>-->
-            <!--<prim-key-class>java.lang.String</prim-key-class>-->
-            <!--<reentrant>false</reentrant>-->
-            <!--<cmp-version>1.x</cmp-version>-->
-            <!--<abstract-schema-name>BookEntityEJB</abstract-schema-name>-->
-            <!--<cmp-field>-->
-                <!--<description>no description</description>-->
-                <!--<field-name>price</field-name>-->
-            <!--</cmp-field>-->
-            <!--<cmp-field>-->
-                <!--<description>no description</description>-->
-                <!--<field-name>code</field-name>-->
-            <!--</cmp-field>-->
-            <!--<cmp-field>-->
-                <!--<description>no description</description>-->
-                <!--<field-name>writer</field-name>-->
-            <!--</cmp-field>-->
-            <!--<cmp-field>-->
-                <!--<description>no description</description>-->
-                <!--<field-name>title</field-name>-->
-            <!--</cmp-field>-->
-            <!--<primkey-field>code</primkey-field>-->
-            <!--<security-identity>-->
-                <!--<description></description>-->
-                <!--<use-caller-identity></use-caller-identity>-->
-            <!--</security-identity>-->
-        <!--</entity>-->
-        <!--<entity>-->
-            <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-            <!--<local-home>swforge.LocalCompanyEntityHome</local-home>-->
-            <!--<local>swforge.LocalCompanyEntity</local>-->
-            <!--<ejb-class>swforge.CompanyEntityBean</ejb-class>-->
-            <!--<persistence-type>Container</persistence-type>-->
-            <!--<prim-key-class>java.lang.String</prim-key-class>-->
-            <!--<reentrant>false</reentrant>-->
-            <!--<cmp-version>2.x</cmp-version>-->
-            <!--<abstract-schema-name>Company</abstract-schema-name>-->
-            <!--<cmp-field>-->
-                <!--<field-name>id</field-name>-->
-            <!--</cmp-field>-->
-            <!--<cmp-field>-->
-                <!--<field-name>name</field-name>-->
-            <!--</cmp-field><cmp-field><field-name>employees</field-name></cmp-field>-->
-            <!--<primkey-field>id</primkey-field>-->
-        <!--</entity>-->
-        <!--<entity>-->
-            <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-            <!--<local-home>swforge.LocalEmployeeEntityHome</local-home>-->
-            <!--<local>swforge.LocalEmployeeEntity</local>-->
-            <!--<ejb-class>swforge.EmployeeEntityBean</ejb-class>-->
-            <!--<persistence-type>Container</persistence-type>-->
-            <!--<prim-key-class>java.lang.String</prim-key-class>-->
-            <!--<reentrant>false</reentrant>-->
-            <!--<cmp-version>2.x</cmp-version>-->
-            <!--<abstract-schema-name>Employee</abstract-schema-name>-->
-            <!--<cmp-field>-->
-                <!--<field-name>empNo</field-name>-->
-            <!--</cmp-field>-->
-            <!--<cmp-field>-->
-                <!--<field-name>name</field-name>-->
-            <!--</cmp-field>-->
-            <!--<cmp-field>-->
-                <!--<field-name>dept</field-name>-->
-            <!--</cmp-field>-->
-            <!--<cmp-field>-->
-                <!--<field-name>company</field-name>-->
-            <!--</cmp-field>-->
-            <!--<primkey-field>empNo</primkey-field>-->
-        <!--</entity>-->
-
-        <!--<session>-->
-            <!--<display-name>EmpEJB</display-name>-->
-            <!--<ejb-name>EmpEJB</ejb-name>-->
-            <!--<home>com.sds.ejb.ch5.EmpHome</home>-->
-            <!--<remote>com.sds.ejb.ch5.Emp</remote>-->
-            <!--<ejb-class>com.sds.ejb.ch5.EmpEJB</ejb-class>-->
-            <!--<session-type>Stateless</session-type>-->
-            <!--<transaction-type>Container</transaction-type>-->
-            <!--<security-identity>-->
-                <!--<description></description>-->
-                <!--<use-caller-identity></use-caller-identity>-->
-            <!--</security-identity>-->
-            <!--<resource-ref>-->
-                <!--<res-ref-name>jdbc/empDB</res-ref-name>-->
-                <!--<res-type>javax.sql.DataSource</res-type>-->
-                <!--<res-auth>Container</res-auth>-->
-                <!--<res-sharing-scope>Shareable</res-sharing-scope>-->
-            <!--</resource-ref>-->
-        <!--</session>-->
+        <entity>
+            <ejb-name>BookEntityEJB</ejb-name>
+            <home>swforge.BookEntityHome</home>
+            <remote>swforge.BookEntity</remote>
+            <ejb-class>swforge.BookEntityBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>java.lang.String</prim-key-class>
+            <reentrant>false</reentrant>
+            <cmp-version>1.x</cmp-version>
+            <abstract-schema-name>BookEntityEJB</abstract-schema-name>
+            <cmp-field>
+                <description>no description</description>
+                <field-name>price</field-name>
+            </cmp-field>
+            <cmp-field>
+                <description>no description</description>
+                <field-name>code</field-name>
+            </cmp-field>
+            <cmp-field>
+                <description>no description</description>
+                <field-name>writer</field-name>
+            </cmp-field>
+            <cmp-field>
+                <description>no description</description>
+                <field-name>title</field-name>
+            </cmp-field>
+            <primkey-field>code</primkey-field>
+            <security-identity>
+                <description></description>
+                <use-caller-identity></use-caller-identity>
+            </security-identity>
+        </entity>
+        <entity>
+            <ejb-name>CompanyEntityEJB</ejb-name>
+            <local-home>swforge.LocalCompanyEntityHome</local-home>
+            <local>swforge.LocalCompanyEntity</local>
+            <ejb-class>swforge.CompanyEntityBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>java.lang.String</prim-key-class>
+            <reentrant>false</reentrant>
+            <cmp-version>2.x</cmp-version>
+            <abstract-schema-name>Company</abstract-schema-name>
+            <cmp-field>
+                <field-name>id</field-name>
+            </cmp-field>
+            <cmp-field>
+                <field-name>name</field-name>
+            </cmp-field><cmp-field><field-name>employees</field-name></cmp-field>
+            <primkey-field>id</primkey-field>
+        </entity>
+        <entity>
+            <ejb-name>EmployeeEntityEJB</ejb-name>
+            <local-home>swforge.LocalEmployeeEntityHome</local-home>
+            <local>swforge.LocalEmployeeEntity</local>
+            <ejb-class>swforge.EmployeeEntityBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>java.lang.String</prim-key-class>
+            <reentrant>false</reentrant>
+            <cmp-version>2.x</cmp-version>
+            <abstract-schema-name>Employee</abstract-schema-name>
+            <cmp-field>
+                <field-name>empNo</field-name>
+            </cmp-field>
+            <cmp-field>
+                <field-name>name</field-name>
+            </cmp-field>
+            <cmp-field>
+                <field-name>dept</field-name>
+            </cmp-field>
+            <cmp-field>
+                <field-name>company</field-name>
+            </cmp-field>
+            <primkey-field>empNo</primkey-field>
+        </entity>
 
     </enterprise-beans>
-    <!--<assembly-descriptor>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>EmpEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>getEmpContents</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-    <!--</assembly-descriptor>-->
 
-    <!--<relationships>-->
-        <!--<ejb-relation>-->
-            <!--<ejb-relationship-role>-->
-                <!--<ejb-relationship-role-name>CompanyEJB</ejb-relationship-role-name>-->
-                <!--<multiplicity>One</multiplicity>-->
-                <!--<relationship-role-source>-->
-                    <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--</relationship-role-source>-->
-                <!--<cmr-field>-->
-                    <!--<cmr-field-name>employees</cmr-field-name>-->
-                    <!--<cmr-field-type>java.util.Collection</cmr-field-type>-->
-                <!--</cmr-field>-->
-            <!--</ejb-relationship-role>-->
-            <!--<ejb-relationship-role>-->
-                <!--<ejb-relationship-role-name>EmployeeEJB</ejb-relationship-role-name>-->
-                <!--<multiplicity>Many</multiplicity>-->
-                <!--<cascade-delete />-->
-                <!--<relationship-role-source>-->
-                    <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--</relationship-role-source>-->
-                <!--<cmr-field>-->
-                    <!--<cmr-field-name>company</cmr-field-name>-->
-                <!--</cmr-field>-->
-            <!--</ejb-relationship-role>-->
-        <!--</ejb-relation>-->
-    <!--</relationships>-->
+    <relationships>
+        <ejb-relation>
+            <ejb-relationship-role>
+                <ejb-relationship-role-name>CompanyEJB</ejb-relationship-role-name>
+                <multiplicity>One</multiplicity>
+                <relationship-role-source>
+                    <ejb-name>CompanyEntityEJB</ejb-name>
+                </relationship-role-source>
+                <cmr-field>
+                    <cmr-field-name>employees</cmr-field-name>
+                    <cmr-field-type>java.util.Collection</cmr-field-type>
+                </cmr-field>
+            </ejb-relationship-role>
+            <ejb-relationship-role>
+                <ejb-relationship-role-name>EmployeeEJB</ejb-relationship-role-name>
+                <multiplicity>Many</multiplicity>
+                <cascade-delete />
+                <relationship-role-source>
+                    <ejb-name>EmployeeEntityEJB</ejb-name>
+                </relationship-role-source>
+                <cmr-field>
+                    <cmr-field-name>company</cmr-field-name>
+                </cmr-field>
+            </ejb-relationship-role>
+        </ejb-relation>
+    </relationships>
 
     <assembly-descriptor>
 
-        <!--<method-permission>-->
-            <!--<unchecked />-->
-            <!---->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>getPrimaryKey</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Home</method-intf>-->
-                <!--<method-name>getEJBMetaData</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Home</method-intf>-->
-                <!--<method-name>findByWriter</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Home</method-intf>-->
-                <!--<method-name>findInRange</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>double</method-param>-->
-                    <!--<method-param>double</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Home</method-intf>-->
-                <!--<method-name>remove</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.Object</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>getEJBHome</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Home</method-intf>-->
-                <!--<method-name>getHomeHandle</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>getTitle</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Home</method-intf>-->
-                <!--<method-name>remove</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>javax.ejb.Handle</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>getCode</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Home</method-intf>-->
-                <!--<method-name>findByPrimaryKey</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>setTitle</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>getWriter</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Home</method-intf>-->
-                <!--<method-name>create</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                    <!--<method-param>double</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>getHandle</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>setPrice</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>double</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>remove</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>isIdentical</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>javax.ejb.EJBObject</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>getPrice</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>setWriter</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-        <!--</method-permission>-->
+        <method-permission>
+            <unchecked />
 
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>getWriter</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>setTitle</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>setPrice</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>double</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>getCode</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>remove</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getPrimaryKey</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>getEJBMetaData</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>findByWriter</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>findInRange</method-name>
+                <method-params>
+                    <method-param>double</method-param>
+                    <method-param>double</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>remove</method-name>
+                <method-params>
+                    <method-param>java.lang.Object</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getEJBHome</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>getHomeHandle</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getTitle</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>remove</method-name>
+                <method-params>
+                    <method-param>javax.ejb.Handle</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getCode</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>findByPrimaryKey</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>setTitle</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getWriter</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Home</method-intf>
+                <method-name>create</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                    <method-param>java.lang.String</method-param>
+                    <method-param>java.lang.String</method-param>
+                    <method-param>double</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getHandle</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>setPrice</method-name>
+                <method-params>
+                    <method-param>double</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>remove</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>isIdentical</method-name>
+                <method-params>
+                    <method-param>javax.ejb.EJBObject</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getPrice</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>setWriter</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
 
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>getPrice</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>setWriter</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>BookEntityEJB</ejb-name>-->
-                <!--<method-intf>Remote</method-intf>-->
-                <!--<method-name>getTitle</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-
-
-        <!--<method-permission>-->
-            <!--<unchecked />-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>LocalHome</method-intf>-->
-                <!--<method-name>remove</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.Object</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getEJBLocalHome</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getName</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>LocalHome</method-intf>-->
-                <!--<method-name>findByPrimaryKey</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getId</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getEmployees</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getPrimaryKey</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>setName</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>remove</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>LocalHome</method-intf>
+                <method-name>remove</method-name>
+                <method-params>
+                    <method-param>java.lang.Object</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getEJBLocalHome</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getName</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>LocalHome</method-intf>
+                <method-name>findByPrimaryKey</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getId</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getEmployees</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getPrimaryKey</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>setName</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>remove</method-name>
+                <method-params />
+            </method>
             <!--<method>-->
                 <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
                 <!--<method-intf>LocalHome</method-intf>-->
@@ -507,43 +392,42 @@
                     <!--<method-param>java.lang.String</method-param>-->
                 <!--</method-params>-->
             <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>isIdentical</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>javax.ejb.EJBLocalObject</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-        <!--</method-permission>-->
-        <!--<method-permission>-->
-            <!--<unchecked />-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getEmpNo</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>LocalHome</method-intf>-->
-                <!--<method-name>remove</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.Object</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getDept</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getEJBLocalHome</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>isIdentical</method-name>
+                <method-params>
+                    <method-param>javax.ejb.EJBLocalObject</method-param>
+                </method-params>
+            </method>
+
+            <!--EmployeeEntityEJB-->
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getEmpNo</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>LocalHome</method-intf>
+                <method-name>remove</method-name>
+                <method-params>
+                    <method-param>java.lang.Object</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getDept</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getEJBLocalHome</method-name>
+                <method-params />
+            </method>
             <!--<method>-->
                 <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
                 <!--<method-intf>LocalHome</method-intf>-->
@@ -554,178 +438,259 @@
                     <!--<method-param>java.lang.String</method-param>-->
                 <!--</method-params>-->
             <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getName</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>LocalHome</method-intf>-->
-                <!--<method-name>findByPrimaryKey</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>setDept</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getPrimaryKey</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getCompany</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>setName</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>remove</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>isIdentical</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>javax.ejb.EJBLocalObject</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-        <!--</method-permission>-->
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getName</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>LocalHome</method-intf>
+                <method-name>findByPrimaryKey</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>setDept</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getPrimaryKey</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getCompany</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>setName</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>remove</method-name>
+                <method-params />
+            </method>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>isIdentical</method-name>
+                <method-params>
+                    <method-param>javax.ejb.EJBLocalObject</method-param>
+                </method-params>
+            </method>
+        </method-permission>
 
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>setName</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getId</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getEmployees</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getName</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>CompanyEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>remove</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>setName</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getName</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>setDept</method-name>-->
-                <!--<method-params>-->
-                    <!--<method-param>java.lang.String</method-param>-->
-                <!--</method-params>-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>remove</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getDept</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getEmpNo</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
-        <!--<container-transaction>-->
-            <!--<method>-->
-                <!--<ejb-name>EmployeeEntityEJB</ejb-name>-->
-                <!--<method-intf>Local</method-intf>-->
-                <!--<method-name>getCompany</method-name>-->
-                <!--<method-params />-->
-            <!--</method>-->
-            <!--<trans-attribute>Required</trans-attribute>-->
-        <!--</container-transaction>-->
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getWriter</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>setTitle</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>setPrice</method-name>
+                <method-params>
+                    <method-param>double</method-param>
+                </method-params>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getCode</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>remove</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getPrice</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>setWriter</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>BookEntityEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getTitle</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+
+
+        <container-transaction>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>setName</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getId</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getEmployees</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getName</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>CompanyEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>remove</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>setName</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getName</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>setDept</method-name>
+                <method-params>
+                    <method-param>java.lang.String</method-param>
+                </method-params>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>remove</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getDept</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getEmpNo</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>EmployeeEntityEJB</ejb-name>
+                <method-intf>Local</method-intf>
+                <method-name>getCompany</method-name>
+                <method-params />
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
 
     </assembly-descriptor>
 
