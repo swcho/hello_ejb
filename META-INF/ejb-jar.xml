@@ -68,6 +68,14 @@
                 <res-sharing-scope>Shareable</res-sharing-scope>
             </resource-ref>
         </session>
+        <session>
+            <ejb-name>SecurityKeySessionEJB</ejb-name>
+            <home>swforge.SecurityKeySessionHome</home>
+            <remote>swforge.SecurityKeySession</remote>
+            <ejb-class>swforge.SecurityKeySessionBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+        </session>
         <entity>
             <ejb-name>MemberEntityEJB</ejb-name>
             <home>swforge.MemberEntityHome</home>
@@ -188,6 +196,13 @@
     </relationships>
 
     <assembly-descriptor>
+        <security-role>
+            <description>admin</description>
+            <role-name>Administrator</role-name>
+        </security-role>
+        <security-role>
+            <role-name>Member</role-name>
+        </security-role>
 
         <method-permission>
             <unchecked />
@@ -509,6 +524,17 @@
                 </method-params>
             </method>
         </method-permission>
+        <method-permission>
+            <role-name>Administrator</role-name>
+        </method-permission>
+        <method-permission>
+            <role-name>Administrator</role-name>
+            <method>
+                <ejb-name>SecurityKeySessionEJB</ejb-name>
+                <method-intf>Remote</method-intf>
+                <method-name>getPrimaryKey</method-name>
+            </method>
+        </method-permission>
 
         <container-transaction>
             <method>
@@ -701,7 +727,6 @@
                 <ejb-name>EmployeeEntityEJB</ejb-name>
                 <method-intf>Local</method-intf>
                 <method-name>getCompany</method-name>
-                <method-params />
             </method>
             <trans-attribute>Required</trans-attribute>
         </container-transaction>
