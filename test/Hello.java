@@ -12,6 +12,15 @@ import java.util.Properties;
  */
 public class Hello {
 
+    private static void printAllTree(InitialContext ctx, String jndiName, String prefix) throws NamingException {
+        NamingEnumeration<NameClassPair> list = ctx.list(jndiName);
+        while (list != null && list.hasMore()) {
+            String name = list.next().getName();
+            System.out.println(prefix + name);
+            Hello.printAllTree(ctx, jndiName + "/" + name, "  " + prefix);
+        }
+    }
+
     public static void main(String[] args) throws NamingException, RemoteException, CreateException, RemoveException {
         System.out.println("Test");
 //        Context context = EJBContainer.createEJBContainer().getContext();
@@ -22,10 +31,8 @@ public class Hello {
 //        props.setProperty("java.naming.provider.url", "127.0.0.1:4201");
 
         InitialContext ctx = new InitialContext(props);
-        NamingEnumeration<NameClassPair> list = ctx.list("");
-        while (list.hasMore()) {
-            System.out.println(list.next().getName());
-        }
+        Hello.printAllTree(ctx, "", "");
+
         Object obj = ctx.lookup("HelloSessionEJBRemoteHome");
         System.out.println(obj.getClass().getName());
         //	narrow casting
